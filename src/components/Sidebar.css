@@ -12,7 +12,7 @@
 .sidebar-content{
     transition: all 0.3 ease;
     height: 100%;
-    background-color: rgb(38, 136, 240);
+    background-color: rgb(188, 217, 249);
 }
 .sidebar-content.hidden{
     display: none;
@@ -21,6 +21,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    color: white;
 }
 .sidebar-content ul li{
     display: flex;
@@ -29,13 +30,9 @@
     color: white;
     
 }
-.sidebar-list{
-    display: flex;
-    flex-direction: row;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: white;
-    font-size: 20px;
-    font-weight: lighter;
+.k-logo{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    margin-top: 30px;
 }
