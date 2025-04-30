@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Navbar.css";
+import acc from '../assets/account.jpg';
 
 
 function Navbar({onToggleSidebar}){
@@ -11,7 +12,15 @@ function Navbar({onToggleSidebar}){
             <button className="menu-btn" onClick={onToggleSidebar}>☰</button>
             </div>
             <div className="main-user">
+                <img src={acc} id="account-image"/>
                 <p id="main-user-text">Main User</p>
+                <div>
+                    <ul>
+                        <li>
+                            
+                        </li>
+                    </ul>
+                </div>
             </div>
             
         </div>

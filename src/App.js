@@ -19,10 +19,13 @@ function App() {
   return (
     <Router>
     <div className="App">
+      
       <Navbar onToggleSidebar={toggleSideBar} />
+      <div className='sidebar-options-content'>
       <Sidebar visible={sidebarOpen} />
-      <div style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-        
+      <div className="the-main-content" style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+      <div className='app-overlay'></div>
+      <div className='list-content'>
       <Routes>
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/reports" element={<Reports />} />
@@ -31,7 +34,8 @@ function App() {
         <Route path="/users" element={<Users />} />
         <Route path="/settings" element={<Settings/>} />
       </Routes>
-      
+      </div>
+      </div>
       </div>
     </div>
     </Router>

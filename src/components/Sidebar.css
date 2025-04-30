@@ -1,34 +1,68 @@
 .sidebar{
-    width: 200px;
-    height: 100vh;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    overflow-y: auto;
     display: flex;
+    margin-top: 30px;
     flex-direction: column;
     justify-content: space-between; 
-    display: flex;
     transition: transform 0.3s ease;
+    z-index: 90;
     
-
 }
 .sidebar-content{
     transition: all 0.3 ease;
-    height: 100%;
-    background-color: rgb(188, 217, 249);
+    height: 100vh;
+    background-color: #A5A5A4;
+    position: relative;
+    
 }
 .sidebar-content.hidden{
-    display: none;
+    width: 0;
+    overflow: hidden;
 }
 .sidebar-content ul{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     color: white;
+    text-decoration: none;
+    width: 100%;
 }
 .sidebar-content ul li{
     display: flex;
     margin-top: 20px;
     margin-bottom: 30px;
+}
+.sidebar-lable{
+    color: #131214;
+    font-size: 20px;
+    width: 100%;
+    padding: 20px;
+}
+
+.sidebar-content-list{
+    margin-left: 0px; 
+    background-color:#A5A5A4 ;
+}
+a{
     color: white;
-    
+    text-decoration: none;
+}
+.sidebar-content ul li:hover{
+    /* background-color: #414040; */
+    color: #ffff;
+    font-weight: bold;
+    align-items: left;
+    cursor: pointer;
+}
+.sidebar-link.active{
+    /* background-color: #414040; */
+    color: #ffff;
+    font-weight: bold;
+    width: 100%;
+    align-items: left;
 }
 .k-logo{
     width: 100px;
@@ -36,3 +70,24 @@
     border-radius: 50px;
     margin-top: 30px;
 }
+.dropdown {
+    list-style: none;
+    padding-left: 20px;
+
+    
+}
+.dropdown ul li{
+    /* background-color: #7F7F7D; */
+    color: #131214;
+}
+  
+.dropdown li a {
+    display: block;
+    padding: 8px 20px;
+    color: black;
+    text-decoration: none;
+}
+  
+/* .dropdown li a:hover {
+    
+} */
