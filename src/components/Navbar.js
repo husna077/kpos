@@ -1,9 +1,16 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import acc from '../assets/account.jpg';
+import { FaChevronDown } from 'react-icons/fa'; // Font Awesome
+import { Link } from "react-router-dom";
+
 
 
 function Navbar({onToggleSidebar}){
+    const [dropDownOpen, setdropDownOpen]=useState(false);
+    const toggleDropdown =()=>{
+        setdropDownOpen(!dropDownOpen);
+    }
    
     return(
         <div className="navbar">
@@ -11,16 +18,17 @@ function Navbar({onToggleSidebar}){
             <h3 id="navbar-heading">Kaushalya</h3>
             <button className="menu-btn" onClick={onToggleSidebar}>☰</button>
             </div>
-            <div className="main-user">
+            <div className="main-user" onClick={toggleDropdown}>
                 <img src={acc} id="account-image"/>
-                <p id="main-user-text">Main User</p>
-                <div>
-                    <ul>
-                        <li>
-                            
-                        </li>
+                
+                <span className="account-name">Main User< FaChevronDown /></span>
+                {dropDownOpen && 
+                
+                    <ul className="dropdown-menu">
+                        <li><Link to="/mainUser/setting" ><lable id="setting-id">Settings</lable></Link></li>
+                        <li>Log Out</li>
                     </ul>
-                </div>
+                }
             </div>
             
         </div>

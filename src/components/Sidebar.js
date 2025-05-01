@@ -4,6 +4,7 @@ import { NavLink, Link } from "react-router-dom";
 import './Sidebar.css';
 import logo from "../assets/logo.webp";
 
+
 function Sidebar({ visible }) {
     const [activeDropdown, setActiveDropdown] = useState(null);
 
@@ -22,10 +23,10 @@ function Sidebar({ visible }) {
                     <ul className="sidebar-content-list">
                         <li><NavLink to="/dashboard" className="sidebar-link"><label className="sidebar-lable">Dashboard</label></NavLink></li>
                         <li><div className="sidebar-link" onClick={() => toggleDropdown('reports')}>
-                            <label className="sidebar-lable">Reports</label>
+                            <label className="sidebar-lable">Reports ▼</label>
                             {activeDropdown === 'reports' && (
                                 <ul className="dropdown">
-                                    <li><Link to="/dashboard/overview">Stock</Link></li>
+                                    <li><Link to="/Reports/Stock" >Stock</Link></li>
                                     <li><Link to="/dashboard/analytics">Branchwise Stock</Link></li>
                                     <li><Link to="/dashboard/overview">Low Stock</Link></li>
                                     <li><Link to="/dashboard/analytics">Out of Stock</Link></li>

@@ -44,13 +44,36 @@
     align-items: center;
     margin-right: 10px;
 }
-#main-user-text{
+.account-name{
     color: white;
+    justify-content: space-around;
     font-weight: 300;
+    cursor: pointer;
 }
 #account-image{
     width: 30px;
     height: 30px;
     border-radius: 18px;
     margin-right:10px ;
+}
+.dropdown-menu{
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background: white;
+    color: black;
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    width: 120px;
+    z-index: 100;
+}
+.dropdown-menu li{
+    padding: 8px 15px;
+    cursor: pointer;
+    color: black;
+}
+#setting-id{
+    color: black;
 }

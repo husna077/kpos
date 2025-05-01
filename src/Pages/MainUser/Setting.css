@@ -1,0 +1,53 @@
+.setting-main-user{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 1000px;
+    height: 90vh;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 5px 10px rgb(235, 235, 235);
+    margin-top: 120px;
+    align-items: start;
+}
+.main-content{
+    color: black;   
+    margin-left: 20px;
+}
+.personal-info{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.personal-div1{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.lable-and-input{
+    display: flex;
+    flex-direction: column;
+    color: black;
+    justify-content: left;
+    align-items: start;
+    margin-top: 20px;
+    margin-left: 20px;
+    
+}
+.payment-details{
+    display: flex;
+    width: 100%;
+    color: black;
+    border-bottom: 1px solid rgb(201, 200, 200);
+    margin-left: 20px;
+}
+.lable-personal{
+    display: flex;
+    color: black;
+
+}
+.input-box-setting{
+    display: flex;
+    width: 100%;
+}
