@@ -12,6 +12,14 @@ import Users from './Pages/Users';
 import Settings from './Pages/Settings';
 import ReportsStock from './Pages/Reports/Stock';
 import MainUserSetting from './Pages/MainUser/Setting';
+import BranchwiseStock from './Pages/Reports/BranchwiseStock';
+import LowStock from './Pages/Reports/LowStock';
+import OutOfStock from './Pages/Reports/OutOfStock';
+import SaleSummary from './Pages/Reports/SaleSummary';
+import SupplySummary from './Pages/Reports/SupplySummary';
+import Customers from './Pages/Reports/Customers';
+import Sales from './Pages/Reports/Sales';
+import ListSupply from './Pages/Supply/ListSupply';
 
 function App() {
   const [sidebarOpen, setsidebarOpen] = useState(false);
@@ -32,6 +40,14 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/reports" element={<Reports />} />
         <Route path="/Reports/Stock" element={<ReportsStock />}/>
+        <Route path="/Reports/BranchwiseStock" element={<BranchwiseStock />}/>
+        <Route path='/Reports/LowStock' element={<LowStock/>}></Route>
+        <Route path='/Reports/OutOfStock' element={<OutOfStock/>}></Route>
+        <Route path='/Reports/SaleSummary' element={<SaleSummary/>}></Route>
+        <Route path='/Reports/SupplySummary' element={<SupplySummary/>}></Route>
+        <Route path='/Reports/Customers' element={<Customers/>}></Route>
+        <Route path='/Reports/Sales' element={<Sales/>}></Route>
+        <Route path='/Supply/ListSupply' element={<ListSupply/>}></Route>
         <Route path="/mainuser/setting" element={<MainUserSetting/>}/>
         <Route path="/supply" element={<Supply/>} />
         <Route path="/products" element={<Products />} />

@@ -14,13 +14,12 @@
 }
 .stock-summary{
     display: flex;
-    color: white;
-    width: 1000px;
+    color: black;
+    padding-left: 20px;
+    margin-top: 20px;
+    width: 100%;
     box-shadow: 0 2px 4px rgb(232, 232, 232);
     height: 40px;
-    background-color: #A5A5A4;
-    justify-content: left;
-    align-items:center ;
 }
 hr {
     border: none;

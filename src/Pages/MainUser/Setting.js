@@ -5,14 +5,16 @@ import './Setting.css';
 const Setting = ()=>{
     return(
         <div className="setting-main-user">
+            <div className="settings-main-content">
             <p className="main-content">Settings</p>
+            </div>
             <div className="personal-info">
                 <div className="personal-div1">
                     <div className="lable-and-input">
                         <lable classname="lable-personal">
                             Name
                         </lable>
-                        <input classname="input-box-setting"></input>
+                        <input type="text" classname="input-box-setting"></input>
 
                     </div>
                     <div className="lable-and-input">

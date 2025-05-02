@@ -27,30 +27,30 @@ function Sidebar({ visible }) {
                             {activeDropdown === 'reports' && (
                                 <ul className="dropdown">
                                     <li><Link to="/Reports/Stock" >Stock</Link></li>
-                                    <li><Link to="/dashboard/analytics">Branchwise Stock</Link></li>
-                                    <li><Link to="/dashboard/overview">Low Stock</Link></li>
-                                    <li><Link to="/dashboard/analytics">Out of Stock</Link></li>
-                                    <li><Link to="/dashboard/overview">Sale Summary </Link></li>
-                                    <li><Link to="/dashboard/analytics">Supply Summary</Link></li>
-                                    <li><Link to="/dashboard/overview">Customers</Link></li>
-                                    <li><Link to="/dashboard/analytics">Sales</Link></li>
+                                    <li><Link to="/Reports/BranchwiseStock">Branchwise Stock</Link></li>
+                                    <li><Link to="/Reports/LowStock">Low Stock</Link></li>
+                                    <li><Link to="/Reports/OutOfStock">Out of Stock</Link></li>
+                                    <li><Link to="/Reports/SaleSummary">Sale Summary </Link></li>
+                                    <li><Link to="/Reports/SupplySummary">Supply Summary</Link></li>
+                                    <li><Link to="/Reports/Customers">Customers</Link></li>
+                                    <li><Link to="/Reports/Sales">Sales</Link></li>
                                                                 
                                 </ul>
                             )}
                         </div></li>
                         <li>
                         <div className="sidebar-link" onClick={() => toggleDropdown('supply')}>
-                            <label className="sidebar-lable">Supply</label>
+                            <label className="sidebar-lable">Supply ▼</label>
                             {activeDropdown === 'supply' && (
                                 <ul className="dropdown">
-                                    <li><Link to="/dashboard/overview">List Supply</Link></li>
+                                    <li><Link to="/Supply/ListSupply">List Supply</Link></li>
                                     <li><Link to="/dashboard/analytics">Add Supply</Link></li>
                                 </ul>
                             )}
                         </div></li>
                         <li>
                         <div className="sidebar-link" onClick={() => toggleDropdown('products')}>
-                            <label className="sidebar-lable">Products</label>
+                            <label className="sidebar-lable">Products ▼</label>
                             {activeDropdown === 'products' && (
                                 <ul className="dropdown">
                                     <li><Link to="/dashboard/overview">Product List</Link></li>
@@ -60,7 +60,7 @@ function Sidebar({ visible }) {
                             )}
                         </div></li>
                         <li><div className="sidebar-link" onClick={() => toggleDropdown('users')}>
-                            <label className="sidebar-lable">Users</label>
+                            <label className="sidebar-lable">Users ▼</label>
                             {activeDropdown === 'users' && (
                                 <ul className="dropdown">
                                     <li><Link to="/dashboard/overview">User List</Link></li>
@@ -69,7 +69,7 @@ function Sidebar({ visible }) {
                             )}
                         </div></li>
                         <li><div className="sidebar-link" onClick={() => toggleDropdown('settings')}>
-                            <label className="sidebar-lable">Settings</label>
+                            <label className="sidebar-lable">Settings ▼</label>
                             {activeDropdown === 'settings' && (
                                 <ul className="dropdown">
                                     <li><Link to="/dashboard/overview">General Settings</Link></li>
