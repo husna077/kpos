@@ -44,7 +44,7 @@ function Sidebar({ visible }) {
                             {activeDropdown === 'supply' && (
                                 <ul className="dropdown">
                                     <li><Link to="/Supply/ListSupply">List Supply</Link></li>
-                                    <li><Link to="/dashboard/analytics">Add Supply</Link></li>
+                                    <li><Link to="/Supply/AddSupply">Add Supply</Link></li>
                                 </ul>
                             )}
                         </div></li>

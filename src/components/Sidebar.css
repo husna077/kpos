@@ -33,7 +33,7 @@
 }
 .sidebar-content ul li{
     display: flex;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     margin-bottom: 30px;
     background-color:#A5A5A4 ;
     width: 100%;

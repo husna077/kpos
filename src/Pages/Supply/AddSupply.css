@@ -1,0 +1,35 @@
+.add-supply-main{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 800px;
+}
+.add-supply{
+    display: flex;
+    flex-direction: column;
+    background-color: #A5A5A4;
+    padding: 20px;
+    align-items: start;
+    max-width: 800px;
+}
+#add-supply-name{
+    width: 400px;
+    margin-top: 10px;
+}
+#add-supply-email{
+    width: 400px;
+    margin-top: 10px;
+}
+#add-supply-btn{
+    width: 120px;
+    background-color: rgb(94, 172, 233);
+    margin-top: 10px;
+    cursor: pointer;
+}
+.form-info-div{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    border-radius: 20px;
+    
+}

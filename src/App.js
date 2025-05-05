@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import React from 'react';
 import './App.css';
 import Navbar from "./components/Navbar";
@@ -20,6 +20,7 @@ import SupplySummary from './Pages/Reports/SupplySummary';
 import Customers from './Pages/Reports/Customers';
 import Sales from './Pages/Reports/Sales';
 import ListSupply from './Pages/Supply/ListSupply';
+import AddSupply from './Pages/Supply/AddSupply';
 
 function App() {
   const [sidebarOpen, setsidebarOpen] = useState(false);
@@ -28,36 +29,38 @@ function App() {
   };
   return (
     <Router>
-    <div className="App">
-      
-      <Navbar onToggleSidebar={toggleSideBar} />
-      <div className='sidebar-options-content'>
-      <Sidebar visible={sidebarOpen} />
-      <div className="the-main-content" style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-      <div className='app-overlay'></div>
-      <div className='list-content'>
-      <Routes>
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/reports" element={<Reports />} />
-        <Route path="/Reports/Stock" element={<ReportsStock />}/>
-        <Route path="/Reports/BranchwiseStock" element={<BranchwiseStock />}/>
-        <Route path='/Reports/LowStock' element={<LowStock/>}></Route>
-        <Route path='/Reports/OutOfStock' element={<OutOfStock/>}></Route>
-        <Route path='/Reports/SaleSummary' element={<SaleSummary/>}></Route>
-        <Route path='/Reports/SupplySummary' element={<SupplySummary/>}></Route>
-        <Route path='/Reports/Customers' element={<Customers/>}></Route>
-        <Route path='/Reports/Sales' element={<Sales/>}></Route>
-        <Route path='/Supply/ListSupply' element={<ListSupply/>}></Route>
-        <Route path="/mainuser/setting" element={<MainUserSetting/>}/>
-        <Route path="/supply" element={<Supply/>} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/users" element={<Users />} />
-        <Route path="/settings" element={<Settings/>} />
-      </Routes>
+      <div className="App">
+
+        <Navbar onToggleSidebar={toggleSideBar} />
+        <div className='sidebar-options-content'>
+          <Sidebar visible={sidebarOpen} />
+          <div className="the-main-content" style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+            <div className='app-overlay'></div>
+            <div className='list-content'>
+              <Routes>
+                <Route path="/" element={<Navigate to="/dashboard" />} />
+                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/reports" element={<Reports />} />
+                <Route path="/Reports/Stock" element={<ReportsStock />} />
+                <Route path="/Reports/BranchwiseStock" element={<BranchwiseStock />} />
+                <Route path='/Reports/LowStock' element={<LowStock />}></Route>
+                <Route path='/Reports/OutOfStock' element={<OutOfStock />}></Route>
+                <Route path='/Reports/SaleSummary' element={<SaleSummary />}></Route>
+                <Route path='/Reports/SupplySummary' element={<SupplySummary />}></Route>
+                <Route path='/Reports/Customers' element={<Customers />}></Route>
+                <Route path='/Reports/Sales' element={<Sales />}></Route>
+                <Route path='/Supply/ListSupply' element={<ListSupply />}></Route>
+                <Route path='/Supply/AddSupply' element={<AddSupply />}></Route>
+                <Route path="/mainuser/setting" element={<MainUserSetting />} />
+                <Route path="/supply" element={<Supply />} />
+                <Route path="/products" element={<Products />} />
+                <Route path="/users" element={<Users />} />
+                <Route path="/settings" element={<Settings />} />
+              </Routes>
+            </div>
+          </div>
+        </div>
       </div>
-      </div>
-      </div>
-    </div>
     </Router>
   );
 }
