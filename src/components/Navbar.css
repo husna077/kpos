@@ -49,12 +49,14 @@
     justify-content: space-around;
     font-weight: 300;
     cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
 }
 #account-image{
     width: 30px;
     height: 30px;
     border-radius: 18px;
     margin-right:10px ;
+    
 }
 .dropdown-menu{
     position: absolute;
@@ -76,4 +78,25 @@
 }
 #setting-id{
     color: black;
+}
+@media screen and (max-width:1024px){
+    .navbar{
+        width: 100%;
+       
+        flex-wrap: wrap;
+    }
+    #navbar-heading{
+        font-size: 3vw;
+        margin-top: 15px;
+    }
+    .account-name{
+        font-size: 3vw;
+        margin-top: 0px;
+    }
+    .menu-btn{
+        margin-top: 10px;
+    }
+    #account-img{
+        margin-top: 0px;
+    }
 }

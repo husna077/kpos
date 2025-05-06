@@ -21,6 +21,7 @@ import Customers from './Pages/Reports/Customers';
 import Sales from './Pages/Reports/Sales';
 import ListSupply from './Pages/Supply/ListSupply';
 import AddSupply from './Pages/Supply/AddSupply';
+import ProductsList from './Pages/Products/ProductsList';
 
 function App() {
   const [sidebarOpen, setsidebarOpen] = useState(false);
@@ -51,6 +52,8 @@ function App() {
                 <Route path='/Reports/Sales' element={<Sales />}></Route>
                 <Route path='/Supply/ListSupply' element={<ListSupply />}></Route>
                 <Route path='/Supply/AddSupply' element={<AddSupply />}></Route>
+                
+                <Route path='/Products/ProductsList' element={<ProductsList/>}></Route>
                 <Route path="/mainuser/setting" element={<MainUserSetting />} />
                 <Route path="/supply" element={<Supply />} />
                 <Route path="/products" element={<Products />} />

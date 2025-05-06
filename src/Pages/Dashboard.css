@@ -20,11 +20,26 @@
     background-color: #7F7F7D;
     text-align: left;
     margin-left: 20px;
-     padding-left: 20px; 
+    padding-left: 20px; 
+}
+.dashboard-p{
+    font-family: 'Times New Roman', Times, serif;
 }
 #graph-image{
     background-color: rgb(238, 236, 236);
     width: 90%;
     height: auto;
     margin-top: 30px;
+}
+@media screen and (max-width:1024px) {
+    .sales-divs{
+        width: 9vw;
+        height: auto;
+        flex-wrap: wrap;
+    }
+    p{
+        font-size: 1rem;
+    }
+    
+    
 }

@@ -17,9 +17,10 @@
     color: black;
     padding-left: 20px;
     margin-top: 20px;
-    width: 100%;
+    width: 96%;
     box-shadow: 0 2px 4px rgb(232, 232, 232);
     height: 40px;
+    font-size: clamp(16px, 2.5vw, 25px);
 }
 hr {
     border: none;
@@ -30,6 +31,8 @@ hr {
     display: flex;
     flex: 1;
     color:black ;
+    font-size: clamp(6px, 2.5vw, 20px);
+    font-family: 'Times New Roman', Times, serif;
 }
 .value-div{
     display: flex;
@@ -40,6 +43,8 @@ hr {
     flex: 1;
     margin-right: 20px;
     
+    font-family: 'Times New Roman', Times, serif;
+    
 }
 .search-lable{
     display: flex;
@@ -47,6 +52,7 @@ hr {
     color: black;
     justify-content: right;
     margin-top: 7px;
+    font-size: clamp(6px, 2.5vw, 20px);
     margin-right: 10px;
 }
 .second-div-stock{
@@ -55,10 +61,19 @@ hr {
     flex-direction: row;
     justify-content: space-between;
 }
+.input-box{
+    width: 200px;
+}
 .image-stock{
     width: 1000px;
 
 }
 .image-database{
     width: 1000px;
+}
+@media screen and (max-width:1024px) {
+    .input-box{
+        width: 100px;
+    }
+    
 }

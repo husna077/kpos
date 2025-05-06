@@ -21,6 +21,7 @@
     background-color: #A5A5A4;
     justify-content: left;
     align-items:center ;
+    font-family: 'Times New Roman', Times, serif;
 }
 hr {
     border: none;
@@ -62,4 +63,20 @@ hr {
 }
 .image-database{
     width: 1000px;
+}
+@media screen and (max-width: 1024px) {
+    .stock-main{
+        width: 500px;
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .stock-summary{
+        font-size: 3vw;
+    }
+    .value-lable{
+        font-size: 3vw;
+    }
+    .search-lable{
+        font-size: 3vw;
+    }
 }

@@ -53,7 +53,7 @@ function Sidebar({ visible }) {
                             <label className="sidebar-lable">Products ▼</label>
                             {activeDropdown === 'products' && (
                                 <ul className="dropdown">
-                                    <li><Link to="/dashboard/overview">Product List</Link></li>
+                                    <li><Link to="/Products/ProductsList">Product List</Link></li>
                                     <li><Link to="/dashboard/analytics">Add Product</Link></li>
                                     <li><Link to="/dashboard/analytics">Print Barcode</Link></li>
                                 </ul>

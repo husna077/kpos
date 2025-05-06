@@ -31,12 +31,11 @@
     border-radius: 4px;
 }
 .branchwise-content{
-    
     margin-top: 20px;
     background-color: white;
     justify-content: left;
     align-items: flex-start;
-    width: 1024x;
+    width: 1024px;
     height: 100vh;
     box-shadow: 0 2px 4px rgb(216, 216, 216);
 }
@@ -48,4 +47,18 @@
     border-top:none;
     width: 350px;
     height: 30px;
+}
+@media screen and (max-width: 1024px){
+    .branchwise-main{
+        width: 500px;
+        flex-wrap: wrap;
+    }
+    .branch-dropdown{
+        width: 400px;
+        flex-wrap: wrap;
+    }
+    .branchwise-content{
+        width: 500px;
+        flex-wrap: wrap;
+    }
 }
