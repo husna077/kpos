@@ -11,7 +11,7 @@
     display: flex;
     flex: 1;
     flex-direction: row;
-    width: 1000px;
+    max-width: 1000px;
     height: 80px;
     background-color: white;
     box-shadow: 0 2px 4px rgb(216, 216, 216);
@@ -36,6 +36,7 @@
     justify-content: left;
     align-items: flex-start;
     width: 1024px;
+    
     height: 100vh;
     box-shadow: 0 2px 4px rgb(216, 216, 216);
 }
@@ -48,9 +49,13 @@
     width: 350px;
     height: 30px;
 }
-@media screen and (max-width: 1024px){
+.second-div-stock{
+    display: flex;
+    flex-direction: row;
+}
+@media screen and (max-width: 768px){
     .branchwise-main{
-        width: 500px;
+        width: auto;
         flex-wrap: wrap;
     }
     .branch-dropdown{
@@ -58,7 +63,10 @@
         flex-wrap: wrap;
     }
     .branchwise-content{
-        width: 500px;
+        width: auto;
         flex-wrap: wrap;
+    }
+    .second-div-stock{
+        flex-direction: column;
     }
 }
