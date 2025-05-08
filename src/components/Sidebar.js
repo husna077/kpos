@@ -3,6 +3,14 @@ import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import './Sidebar.css';
 import logo from "../assets/logo.webp";
+import products from '../assets/product.png';
+import { TfiPackage } from "react-icons/tfi";
+import { TfiBarChart } from "react-icons/tfi";
+import { TfiHome } from "react-icons/tfi";
+import { TfiPencilAlt } from "react-icons/tfi";
+import { VscAccount } from "react-icons/vsc";
+import { VscSettingsGear } from "react-icons/vsc";
+
 
 
 function Sidebar({ visible }) {
@@ -21,9 +29,9 @@ function Sidebar({ visible }) {
                         <img src={logo} className="k-logo" />
                     </div>
                     <ul className="sidebar-content-list">
-                        <li><NavLink to="/dashboard" className="sidebar-link"><label className="sidebar-lable">Dashboard</label></NavLink></li>
+                        <li><NavLink to="/dashboard" className="sidebar-link"><label className="sidebar-lable"><TfiHome /> Dashboard</label></NavLink></li>
                         <li><div className="sidebar-link" onClick={() => toggleDropdown('reports')}>
-                            <label className="sidebar-lable">Reports ▼</label>
+                            <label className="sidebar-lable"><TfiPencilAlt /> Reports ▼</label>
                             {activeDropdown === 'reports' && (
                                 <ul className="dropdown">
                                     <li><Link to="/Reports/Stock" >Stock</Link></li>
@@ -40,7 +48,7 @@ function Sidebar({ visible }) {
                         </div></li>
                         <li>
                         <div className="sidebar-link" onClick={() => toggleDropdown('supply')}>
-                            <label className="sidebar-lable">Supply ▼</label>
+                            <label className="sidebar-lable"><TfiBarChart /> Supply ▼</label>
                             {activeDropdown === 'supply' && (
                                 <ul className="dropdown">
                                     <li><Link to="/Supply/ListSupply">List Supply</Link></li>
@@ -50,7 +58,10 @@ function Sidebar({ visible }) {
                         </div></li>
                         <li>
                         <div className="sidebar-link" onClick={() => toggleDropdown('products')}>
-                            <label className="sidebar-lable">Products ▼</label>
+                            <div>
+                                
+                                <label className="sidebar-lable"><TfiPackage /> Products ▼</label>
+                                </div>
                             {activeDropdown === 'products' && (
                                 <ul className="dropdown">
                                     <li><Link to="/Products/ProductsList">Product List</Link></li>
@@ -60,7 +71,7 @@ function Sidebar({ visible }) {
                             )}
                         </div></li>
                         <li><div className="sidebar-link" onClick={() => toggleDropdown('users')}>
-                            <label className="sidebar-lable">Users ▼</label>
+                            <label className="sidebar-lable"><VscAccount /> Users ▼</label>
                             {activeDropdown === 'users' && (
                                 <ul className="dropdown">
                                     <li><Link to="/dashboard/overview">User List</Link></li>
@@ -69,7 +80,7 @@ function Sidebar({ visible }) {
                             )}
                         </div></li>
                         <li><div className="sidebar-link" onClick={() => toggleDropdown('settings')}>
-                            <label className="sidebar-lable">Settings ▼</label>
+                            <label className="sidebar-lable"><VscSettingsGear /> Settings ▼</label>
                             {activeDropdown === 'settings' && (
                                 <ul className="dropdown">
                                     <li><Link to="/dashboard/overview">General Settings</Link></li>

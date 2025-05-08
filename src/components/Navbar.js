@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import acc from '../assets/account.jpg';
 import { FaChevronDown } from 'react-icons/fa'; // Font Awesome
 import { Link } from "react-router-dom";
+import { VscAccount } from "react-icons/vsc";
 
 
 
@@ -19,9 +19,9 @@ function Navbar({onToggleSidebar}){
             <button className="menu-btn" onClick={onToggleSidebar}>☰</button>
             </div>
             <div className="main-user" onClick={toggleDropdown}>
-                <img src={acc} id="account-image"/>
                 
-                <span className="account-name">Main User< FaChevronDown /></span>
+                
+                <span className="account-name"><VscAccount /> Main User< FaChevronDown /></span>
                 {dropDownOpen && 
                 
                     <ul className="dropdown-menu">
