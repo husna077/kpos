@@ -12,7 +12,7 @@ function Stock({ onChange }) {
         onChange(newValue);
     }
     return (
-        <div className="stock-main">
+        <div className="stock-main-first">
             <p className="stock-summary">Stock Summary (Value Rs. 4295346.4)</p>
             <div className="second-div-stock">
             <div className="value-div " style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>

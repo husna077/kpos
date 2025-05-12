@@ -22,7 +22,11 @@ function AddSupply({onChange = () => {}}) {
                 </select>
                 <button className="filter-btn">Filter</button>
             </div> */}
+            <div className="add-supply-heading-div">
+                    <p id="add-supply-text">Add Supply</p>
+                </div>
             <div className="form-info-div">
+                
                 <form>
                     <div className="add-supply">
                         <lable>Product Name </lable>
@@ -30,13 +34,12 @@ function AddSupply({onChange = () => {}}) {
                         type="text"
                         name="name"
                         id="add-supply-name"
-                        
                         /><br/>
                         <label>Stock</label>
                         <input 
                         type="email"
                         name="email"
-                        id="add-supply-email"/>
+                        id="add-supply-name"/>
                         <button type="Submit" id="add-supply-btn">Add Supply</button>
                     </div>
                 </form>

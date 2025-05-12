@@ -1,7 +1,7 @@
-.stock-main{
+.stock-main-first{
     display: flex;
     flex-direction: column;
-    flex: 1;
+  
     width: 1000px;
     height: 100vh;
     margin-left: 30px;
@@ -65,10 +65,10 @@ hr {
     width: 1000px;
 }
 @media screen and (max-width: 1024px) {
-    .stock-main{
-        width: 500px;
+    .stock-main-first{
+        width: auto;
         flex-wrap: wrap;
-        height: auto;
+        height: 100vh;
     }
     .stock-summary{
         font-size: 3vw;

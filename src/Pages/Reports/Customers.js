@@ -12,7 +12,7 @@ function Customers({ onChange }) {
         onChange(newValue);
     }
     return (
-        <div className="stock-main">
+        <div className="stock-main-first">
             <p className="stock-summary">Customers List</p>
             <div className="second-div-stock">
             <div className="value-div " style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>

@@ -11,6 +11,13 @@ function Navbar({onToggleSidebar}){
     const toggleDropdown =()=>{
         setdropDownOpen(!dropDownOpen);
     }
+    const handleLogout = ()=>{
+        const confirmed = window.confirm("Do you want to Logout?");
+        if (confirmed){
+            console.log("Logged Out");
+        }
+        
+    }
    
     return(
         <div className="navbar">
@@ -26,7 +33,7 @@ function Navbar({onToggleSidebar}){
                 
                     <ul className="dropdown-menu">
                         <li><Link to="/mainUser/setting" ><lable id="setting-id">Settings</lable></Link></li>
-                        <li>Log Out</li>
+                        <li><button className="logout-btn" onClick={handleLogout}>Log Out</button></li>
                     </ul>
                 }
             </div>

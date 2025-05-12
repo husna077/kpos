@@ -78,6 +78,13 @@
 }
 #setting-id{
     color: black;
+    font-size: 15px;
+}
+.logout-btn{
+    border: none;
+    background-color: white;
+    color: black;
+    font-size: 15px;
 }
 @media screen and (max-width:1024px){
     .navbar{

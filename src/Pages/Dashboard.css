@@ -32,10 +32,13 @@
     margin-top: 30px;
 }
 @media screen and (max-width:1024px) {
+    
+    .sales-and-stock{
+        flex-direction: column;
+    }
     .sales-divs{
-        width: 9vw;
-        height: auto;
-        flex-wrap: wrap;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
     p{
         font-size: 1rem;
