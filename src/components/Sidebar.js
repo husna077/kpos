@@ -65,8 +65,8 @@ function Sidebar({ visible }) {
                             {activeDropdown === 'products' && (
                                 <ul className="dropdown">
                                     <li><Link to="/Products/ProductsList">Product List</Link></li>
-                                    <li><Link to="/dashboard/analytics">Add Product</Link></li>
-                                    <li><Link to="/dashboard/analytics">Print Barcode</Link></li>
+                                    <li><Link to="/Products/Addproduct">Add Product</Link></li>
+                                    <li><Link to="/Product/PrintBarcode">Print Barcode</Link></li>
                                 </ul>
                             )}
                         </div></li>
@@ -74,8 +74,8 @@ function Sidebar({ visible }) {
                             <label className="sidebar-lable"><VscAccount /> Users ▼</label>
                             {activeDropdown === 'users' && (
                                 <ul className="dropdown">
-                                    <li><Link to="/dashboard/overview">User List</Link></li>
-                                    <li><Link to="/dashboard/analytics">Add User</Link></li>
+                                    <li><Link to="/Users/UserList">User List</Link></li>
+                                    <li><Link to="/Users/AddUser">Add User</Link></li>
                                 </ul>
                             )}
                         </div></li>

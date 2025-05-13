@@ -15,7 +15,18 @@
     font-weight: bold;
     padding-left: 15px;
 }
-
+.add-supply-info-div{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+}
+.info-name-lable{
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    margin-left: 20px;
+}
 .add-supply{
     display: flex;
     flex-direction: column;
@@ -23,15 +34,15 @@
     padding: 20px;
     align-items: start;
     max-width: 800px;
+    justify-content: left;
+    align-items: left;
 }
 #add-supply-name{
-    width: 400px;
+    width: 350px;
     margin-top: 10px;
+    margin-left: 20px;
 }
-#add-supply-email{
-    width: 400px;
-    margin-top: 10px;
-}
+
 #add-supply-btn{
     width: 120px;
     background-color: rgb(94, 172, 233);
@@ -40,8 +51,10 @@
     border: none;
     border-radius: 10px;
     height: 30px;
+    margin-bottom: 20px;
+    margin-left: 10px;
 }
-.form-info-div{
+.form-info-div-add-supply{
     display: flex;
     flex-direction: column;
     margin-top: 40px;
