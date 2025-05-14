@@ -26,6 +26,9 @@ import Addproduct from './Pages/Products/Addproduct';
 import PrintBarcode from './Pages/Products/PrintBarcode';
 import UserList from './Pages/Users/UserList';
 import AddUser from './Pages/Users/AddUser';
+import GeneralSetting from './Pages/SettingsSidebar/GeneralSetting';
+import AddBranch from './Pages/SettingsSidebar/AddBranch';
+import Branches from './Pages/SettingsSidebar/Branches';
 
 
 function App() {
@@ -62,6 +65,9 @@ function App() {
                 <Route path='/Product/PrintBarcode' element={<PrintBarcode/>}></Route>
                 <Route path='/Users/UserList' element={<UserList />}></Route>
                 <Route path='/Users/AddUser' element={<AddUser />}></Route>
+                <Route path='/SettingsSidebar/GeneralSetting' element={<GeneralSetting/>}></Route>
+                <Route path='/SettingsSidebar/AddBranch' element={<AddBranch/>}></Route>
+                <Route path='/SettingsSidebar/Branches' element={<Branches/>}></Route>
                 <Route path="/mainuser/setting" element={<MainUserSetting />} />
                 <Route path="/supply" element={<Supply />} />
                 <Route path="/products" element={<Products />} />

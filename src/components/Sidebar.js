@@ -83,9 +83,9 @@ function Sidebar({ visible }) {
                             <label className="sidebar-lable"><VscSettingsGear /> Settings ▼</label>
                             {activeDropdown === 'settings' && (
                                 <ul className="dropdown">
-                                    <li><Link to="/dashboard/overview">General Settings</Link></li>
-                                    <li><Link to="/dashboard/analytics">Branches</Link></li>
-                                    <li><Link to="/dashboard/analytics">Add Branch</Link></li>
+                                    <li><Link to="/SettingsSidebar/GeneralSetting">General Settings</Link></li>
+                                    <li><Link to="/SettingsSidebar/Branches">Branches</Link></li>
+                                    <li><Link to="/SettingsSidebar/AddBranch">Add Branch</Link></li>
                                 </ul>
                             )}
                         </div></li>

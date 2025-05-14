@@ -1,7 +1,7 @@
 .setting-main-user{
     display: flex;
     flex-direction: column;
-    flex: 1;
+   
     flex-wrap: wrap;
     width: 1000px;
     height: fit-content;
