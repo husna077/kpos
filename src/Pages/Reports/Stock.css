@@ -64,6 +64,17 @@ hr {
 .image-database{
     width: 1000px;
 }
+.list-stock{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    width: 100%;
+    color: black;
+    margin-top: 20px;
+}
+.table-head{
+    border: 2px solid black;
+}
 @media screen and (max-width: 1024px) {
     .stock-main-first{
         width: auto;
