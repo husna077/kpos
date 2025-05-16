@@ -1,6 +1,6 @@
 import react from "react";
 import './BranchwiseStock.css';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function BranchwiseStock({onChange = () => {}}) {
     const [value, setValue] = useState(100);
@@ -10,6 +10,15 @@ function BranchwiseStock({onChange = () => {}}) {
             setValue(newValue);
             onChange(newValue);
         }
+        const [data, setData] = useState([]);
+            useEffect(() => {
+                const dummyData = [
+                    { id: 1, name: "John", age: 25, branch: 'One Branch'},
+                    { id: 2, name: "Jane", age: 28, branch: "Two Branch"},
+                    { id: 3, name: "Alice", age: 22, branch: "Vasai" },
+                ];
+                setData(dummyData);
+            }, []);
     return(
         <div className="branchwise-main">
             <div className="branch-dropdown">
@@ -43,7 +52,20 @@ function BranchwiseStock({onChange = () => {}}) {
             {/* <div className="image-stock">
                 <img src={Database} className="image-databse"/>
             </div> */}
+            <div className="list-stock">
+                    <table>
+                        <thead className="table-head">
+                            <tr><th>Sr.No</th><th>Name</th><th>Age</th><th>Branch</th></tr>
+                        </thead>
+                        <tbody>
+                            {data.map((item) => (
+                                <tr key={item.id}><td>{item.id}</td><td>{item.name}</td><td>{item.age}</td><td>{item.branch}</td></tr>
+                            ))}
+                        </tbody>
+                    </table>
+</div>
         </div>
+        
         </div>
     )
 }

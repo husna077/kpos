@@ -1,6 +1,6 @@
 import React from "react";
 import './Customers.css';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Database from './databse.png';
 
 function Customers({ onChange }) {
@@ -11,6 +11,15 @@ function Customers({ onChange }) {
         setValue(newValue);
         onChange(newValue);
     }
+    const [data, setData] = useState([]);
+        useEffect(() => {
+            const dummyData = [
+                { id: 1, name: "John", age: 25, custid: 23465},
+                { id: 2, name: "Jane", age: 28, custid: 23765},
+                { id: 3, name: "Alice", age: 22, custid: 23365 },
+            ];
+            setData(dummyData);
+        }, []);
     return (
         <div className="stock-main-first">
             <p className="stock-summary">Customers List</p>
@@ -33,6 +42,18 @@ function Customers({ onChange }) {
             {/* <div className="image-stock">
                 <img src={Database} className="image-databse"/>
             </div> */}
+            <div className="list-stock">
+                    <table>
+                        <thead className="table-head">
+                            <tr><th>Sr.No</th><th>Name</th><th>Age</th><th>Customer ID</th></tr>
+                        </thead>
+                        <tbody>
+                            {data.map((item) => (
+                                <tr key={item.id}><td>{item.id}</td><td>{item.name}</td><td>{item.age}</td><td>{item.custid}</td></tr>
+                            ))}
+                        </tbody>
+                    </table>
+</div>
         </div>
     )
 }

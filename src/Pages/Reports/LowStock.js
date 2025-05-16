@@ -1,6 +1,6 @@
 import react from "react";
 import './LowStock.css';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function LowStock({onChange = () => {}}) {
     const [value, setValue] = useState(100);
@@ -10,6 +10,15 @@ function LowStock({onChange = () => {}}) {
             setValue(newValue);
             onChange(newValue);
         }
+        const [data, setData] = useState([]);
+                    useEffect(() => {
+                        const dummyData = [
+                            { id: 1, productname: "Product 1", stock: 25, branch: 'One Branch'},
+                            { id: 2, productname: "Product 2", stock: 28, branch: "Two Branch"},
+                            { id: 3, productname: "Product 3", stock: 22, branch: "Vasai" },
+                        ];
+                        setData(dummyData);
+                    }, []);
     return(
         <div className="lowstock-main">
             <div className="lowstock-dropdown">
@@ -43,6 +52,18 @@ function LowStock({onChange = () => {}}) {
             {/* <div className="image-stock">
                 <img src={Database} className="image-databse"/>
             </div> */}
+             <div className="list-stock">
+                    <table>
+                        <thead className="table-head">
+                            <tr><th>Sr.No</th><th>Product Name</th><th>Stock</th><th>Branch</th></tr>
+                        </thead>
+                        <tbody>
+                            {data.map((item) => (
+                                <tr key={item.id}><td>{item.id}</td><td>{item.productname}</td><td>{item.stock}</td><td>{item.branch}</td></tr>
+                            ))}
+                        </tbody>
+                    </table>
+</div>
         </div>
         </div>
     )
