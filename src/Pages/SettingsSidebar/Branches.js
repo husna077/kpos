@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
 function Branches({ onChange }) {
@@ -11,6 +11,15 @@ function Branches({ onChange }) {
         setValue(newValue);
         onChange(newValue);
     }
+    const [data, setData] = useState([]);
+                useEffect(() => {
+                    const dummyData = [
+                        { id: 1, productname: "Branch 1", sale: 2512 },
+                        { id: 2, productname: "Branch 2", sale: 2834 },
+                        { id: 3, productname: "Branch 3", sale: 2231 },
+                    ];
+                    setData(dummyData);
+                }, []);
     return (
         <div className="stock-main-first">
             <p className="stock-summary">Branches</p>
@@ -33,6 +42,18 @@ function Branches({ onChange }) {
             {/* <div className="image-stock">
                 <img src={Database} className="image-databse"/>
             </div> */}
+            <div className="list-stock">
+                    <table>
+                        <thead className="table-head">
+                            <tr><th>Sr.No</th><th>Branch Name</th><th>User ID</th></tr>
+                        </thead>
+                        <tbody>
+                            {data.map((item) => (
+                                <tr key={item.id}><td>{item.id}</td><td>{item.productname}</td><td>{item.sale}</td></tr>
+                            ))}
+                        </tbody>
+                    </table>
+</div>
         </div>
     )
 }

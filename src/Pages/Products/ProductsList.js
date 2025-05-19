@@ -1,6 +1,6 @@
 import react from "react";
 import './ProductsList.css';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function ProductsList({onChange = () => {}}) {
     const [value, setValue] = useState(100);
@@ -10,6 +10,15 @@ function ProductsList({onChange = () => {}}) {
             setValue(newValue);
             onChange(newValue);
         }
+        const [data, setData] = useState([]);
+                    useEffect(() => {
+                        const dummyData = [
+                            { id: 1, productname: "Product 1", sale: 2512 },
+                            { id: 2, productname: "Product 2", sale: 2834 },
+                            { id: 3, productname: "Product 3", sale: 2231 },
+                        ];
+                        setData(dummyData);
+                    }, []);
     return(
         <div className="branchwise-main">
             <div className="branch-dropdown">
@@ -43,6 +52,18 @@ function ProductsList({onChange = () => {}}) {
             {/* <div className="image-stock">
                 <img src={Database} className="image-databse"/>
             </div> */}
+            <div className="list-stock">
+                    <table>
+                        <thead className="table-head">
+                            <tr><th>Sr.No</th><th>Product Name</th><th>Quantity</th></tr>
+                        </thead>
+                        <tbody>
+                            {data.map((item) => (
+                                <tr key={item.id}><td>{item.id}</td><td>{item.productname}</td><td>{item.sale}</td></tr>
+                            ))}
+                        </tbody>
+                    </table>
+</div>
         </div>
         </div>
     )
