@@ -14,9 +14,9 @@ function Stock({ onChange }) {
     const [data, setData] = useState([]);
     useEffect(() => {
         const dummyData = [
-            { id: 1, name: "John", age: 25 },
-            { id: 2, name: "Jane", age: 28 },
-            { id: 3, name: "Alice", age: 22 },
+            { id: 1, productname: "Product 1", age: 25 },
+            { id: 2, productname: "Product 2", age: 28 },
+            { id: 3, productname: "Product 3", age: 22 },
         ];
         setData(dummyData);
     }, []);
@@ -42,11 +42,11 @@ function Stock({ onChange }) {
                 <div className="list-stock">
                     <table>
                         <thead className="table-head">
-                            <tr><th>Sr.No</th><th>Name</th><th>Age</th></tr>
+                            <tr><th>Sr.No</th><th>Product Name</th><th>Stock</th></tr>
                         </thead>
                         <tbody>
                             {data.map((item) => (
-                                <tr key={item.id}><td>{item.id}</td><td>{item.name}</td><td>{item.age}</td></tr>
+                                <tr key={item.id}><td>{item.id}</td><td>{item.productname}</td><td>{item.age}</td></tr>
                             ))}
                         </tbody>
                     </table>

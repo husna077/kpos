@@ -75,6 +75,9 @@ hr {
 .table-head{
     border: 2px solid black;
 }
+.table-head.th{
+    border: 2px solid black;
+}
 @media screen and (max-width: 1024px) {
     .stock-main-first{
         width: auto;

@@ -13,9 +13,9 @@ function BranchwiseStock({onChange = () => {}}) {
         const [data, setData] = useState([]);
             useEffect(() => {
                 const dummyData = [
-                    { id: 1, name: "John", age: 25, branch: 'One Branch'},
-                    { id: 2, name: "Jane", age: 28, branch: "Two Branch"},
-                    { id: 3, name: "Alice", age: 22, branch: "Vasai" },
+                    { id: 1, productname: "Product 1", age: 25, branch: 'One Branch'},
+                    { id: 2, productname: "Product 2", age: 28, branch: "Two Branch"},
+                    { id: 3, productname: "Product 3", age: 22, branch: "Vasai" },
                 ];
                 setData(dummyData);
             }, []);
@@ -55,7 +55,7 @@ function BranchwiseStock({onChange = () => {}}) {
             <div className="list-stock">
                     <table>
                         <thead className="table-head">
-                            <tr><th>Sr.No</th><th>Name</th><th>Age</th><th>Branch</th></tr>
+                            <tr><th>Sr.No</th><th>Product Name</th><th>Stock</th><th>Branch</th></tr>
                         </thead>
                         <tbody>
                             {data.map((item) => (
