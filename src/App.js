@@ -32,9 +32,9 @@ import Branches from './Pages/SettingsSidebar/Branches';
 
 
 function App() {
-  const [sidebarOpen, setsidebarOpen] = useState(false);
+  const [sidebarOpen, setsidebarOpen] = useState(true);
   const toggleSideBar = () => {
-    setsidebarOpen(!sidebarOpen);
+    setsidebarOpen(prev => !prev);
   };
   return (
     <Router>

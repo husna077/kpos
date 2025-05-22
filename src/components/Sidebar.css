@@ -103,6 +103,12 @@ a{
     width: 20px;
     height: 20px;
 }
+.sidebar-link.active {
+  background-color: white;
+  color: #131214;
+  font-weight: bold;
+  border-radius: 4px;
+}
 @media screen and (max-width:1024px) {
     .sidebar-content{
         height: 100%;

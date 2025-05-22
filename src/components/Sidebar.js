@@ -29,19 +29,19 @@ function Sidebar({ visible }) {
                         <img src={logo} className="k-logo" />
                     </div>
                     <ul className="sidebar-content-list">
-                        <li><NavLink to="/dashboard" className="sidebar-link"><label className="sidebar-lable"><TfiHome /> Dashboard</label></NavLink></li>
+                        <li><NavLink  to="/dashboard" className="sidebar-link"><label className="sidebar-lable"><TfiHome /> Dashboard</label></NavLink></li>
                         <li><div className="sidebar-link" onClick={() => toggleDropdown('reports')}>
                             <label className="sidebar-lable"><TfiPencilAlt /> Reports ▼</label>
                             {activeDropdown === 'reports' && (
                                 <ul className="dropdown">
-                                    <li><Link to="/Reports/Stock" >Stock</Link></li>
-                                    <li><Link to="/Reports/BranchwiseStock">Branchwise Stock</Link></li>
-                                    <li><Link to="/Reports/LowStock">Low Stock</Link></li>
-                                    <li><Link to="/Reports/OutOfStock">Out of Stock</Link></li>
-                                    <li><Link to="/Reports/SaleSummary">Sale Summary </Link></li>
-                                    <li><Link to="/Reports/SupplySummary">Supply Summary</Link></li>
-                                    <li><Link to="/Reports/Customers">Customers</Link></li>
-                                    <li><Link to="/Reports/Sales">Sales</Link></li>
+                                    <li><NavLink to="/Reports/Stock" className={({ isActive }) => isActive ? 'sidebar-link active' : 'sidebar-link'}>Stock</NavLink></li>
+                                    <li><NavLink to="/Reports/BranchwiseStock" className={({ isActive }) => isActive ? 'sidebar-link active' : 'sidebar-link'}>Branchwise Stock</NavLink></li>
+                                    <li><NavLink to="/Reports/LowStock" className={({ isActive }) => isActive ? 'sidebar-link active' : 'sidebar-link'}>Low Stock</NavLink></li>
+                                    <li><NavLink to="/Reports/OutOfStock" className={({ isActive }) => isActive ? 'sidebar-link active' : 'sidebar-link'}>Out of Stock</NavLink></li>
+                                    <li><NavLink to="/Reports/SaleSummary" className={({ isActive }) => isActive ? 'sidebar-link active' : 'sidebar-link'}>Sale Summary </NavLink></li>
+                                    <li><NavLink to="/Reports/SupplySummary" className={({ isActive }) => isActive ? 'sidebar-link active' : 'sidebar-link'}>Supply Summary</NavLink></li>
+                                    <li><NavLink to="/Reports/Customers" className={({ isActive }) => isActive ? 'sidebar-link active' : 'sidebar-link'}>Customers</NavLink></li>
+                                    <li><NavLink to="/Reports/Sales" className={({ isActive }) => isActive ? 'sidebar-link active' : 'sidebar-link'}>Sales</NavLink></li>
                                                                 
                                 </ul>
                             )}
@@ -51,8 +51,8 @@ function Sidebar({ visible }) {
                             <label className="sidebar-lable"><TfiBarChart /> Supply ▼</label>
                             {activeDropdown === 'supply' && (
                                 <ul className="dropdown">
-                                    <li><Link to="/Supply/ListSupply">List Supply</Link></li>
-                                    <li><Link to="/Supply/AddSupply">Add Supply</Link></li>
+                                    <li><NavLink to="/Supply/ListSupply" className={({ isActive }) => isActive ? 'sidebar-link active' : 'sidebar-link'}>List Supply</NavLink></li>
+                                    <li><NavLink to="/Supply/AddSupply" className={({ isActive }) => isActive ? 'sidebar-link active' : 'sidebar-link'}>Add Supply</NavLink></li>
                                 </ul>
                             )}
                         </div></li>
@@ -64,9 +64,9 @@ function Sidebar({ visible }) {
                                 </div>
                             {activeDropdown === 'products' && (
                                 <ul className="dropdown">
-                                    <li><Link to="/Products/ProductsList">Product List</Link></li>
-                                    <li><Link to="/Products/Addproduct">Add Product</Link></li>
-                                    <li><Link to="/Product/PrintBarcode">Print Barcode</Link></li>
+                                    <li><NavLink to="/Products/ProductsList" className={({ isActive }) => isActive ? 'sidebar-link active' : 'sidebar-link'}>Product List</NavLink></li>
+                                    <li><NavLink to="/Products/Addproduct" className={({ isActive }) => isActive ? 'sidebar-link active' : 'sidebar-link'}>Add Product</NavLink></li>
+                                    <li><NavLink to="/Product/PrintBarcode" className={({ isActive }) => isActive ? 'sidebar-link active' : 'sidebar-link'}>Print Barcode</NavLink></li>
                                 </ul>
                             )}
                         </div></li>
@@ -74,8 +74,8 @@ function Sidebar({ visible }) {
                             <label className="sidebar-lable"><VscAccount /> Users ▼</label>
                             {activeDropdown === 'users' && (
                                 <ul className="dropdown">
-                                    <li><Link to="/Users/UserList">User List</Link></li>
-                                    <li><Link to="/Users/AddUser">Add User</Link></li>
+                                    <li><NavLink to="/Users/UserList" className={({ isActive }) => isActive ? 'sidebar-link active' : 'sidebar-link'}>User List</NavLink></li>
+                                    <li><NavLink to="/Users/AddUser" className={({ isActive }) => isActive ? 'sidebar-link active' : 'sidebar-link'}>Add User</NavLink></li>
                                 </ul>
                             )}
                         </div></li>
@@ -83,9 +83,9 @@ function Sidebar({ visible }) {
                             <label className="sidebar-lable"><VscSettingsGear /> Settings ▼</label>
                             {activeDropdown === 'settings' && (
                                 <ul className="dropdown">
-                                    <li><Link to="/SettingsSidebar/GeneralSetting">General Settings</Link></li>
-                                    <li><Link to="/SettingsSidebar/Branches">Branches</Link></li>
-                                    <li><Link to="/SettingsSidebar/AddBranch">Add Branch</Link></li>
+                                    <li><NavLink to="/SettingsSidebar/GeneralSetting" className={({ isActive }) => isActive ? 'sidebar-link active' : 'sidebar-link'}>General Settings</NavLink></li>
+                                    <li><NavLink to="/SettingsSidebar/Branches" className={({ isActive }) => isActive ? 'sidebar-link active' : 'sidebar-link'}>Branches</NavLink></li>
+                                    <li><NavLink to="/SettingsSidebar/AddBranch" className={({ isActive }) => isActive ? 'sidebar-link active' : 'sidebar-link'}>Add Branch</NavLink></li>
                                 </ul>
                             )}
                         </div></li>
