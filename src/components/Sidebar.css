@@ -43,7 +43,9 @@
     font-family: 'Times New Roman', Times, serif;
     font-size: clamp(10px, 2.5vw, 20px);
     width: 100%;
-    padding: 20px;
+    
+    background: none;
+    border: none;
 }
 .sidebar-lable:hover{
     cursor: pointer;
