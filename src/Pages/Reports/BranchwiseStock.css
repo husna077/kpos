@@ -57,6 +57,7 @@
     .branchwise-main{
         width: auto;
         flex-wrap: wrap;
+       
     }
     .branch-dropdown{
         width: 400px;
@@ -65,6 +66,7 @@
     .branchwise-content{
         width: auto;
         flex-wrap: wrap;
+         height: 100vh;
     }
     .second-div-stock{
         flex-direction: column;
