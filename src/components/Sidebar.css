@@ -102,8 +102,8 @@ a{
 
 }
 .sidebar-opt-imgs{
-    width: 20px;
-    height: 20px;
+    width: 100px;
+    height: 100px;
 }
 .sidebar-link.active {
   background-color: white;
